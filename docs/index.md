@@ -4,6 +4,11 @@ Welcome to the OpenLearningQuest documentation.
 
 ## Contents
 
-- [Rationale](rationale.md)
-- [Philosophy](philosophy.md)
-- [Design](design.md)
+- [OpenLearningQuest documentation](#openlearningquest-documentation)
+  - [Contents](#contents)
+  - [Rationale](#rationale)
+  - [Philosophy](#philosophy)
+
+## Rationale
+
+## Philosophy
