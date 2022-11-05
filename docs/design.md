@@ -63,13 +63,32 @@ This document describes the overall intended design for the OpenLearningQuest ga
 
 ## Team
 
+The OpenLearningQuest team consists of
+
+- Brylie Christopher Oxley
+- Harry Quedenfeld
+
+We encourage artwork and story contributions from other stakeholders, such as our kids.
+
 ## Game Overview
+
+The OpenLearningQuest game follows a character as they navigate a small town using science and math to solve problems.
 
 ### Concept
 
+The player experiences the main character's daily life and helps them gain new knowledge to solve problems. Some actions are rewarded with knowledge points, while other activities earn heart points. Knowledge points can unlock new skills in the related category, such as science, biology, or math. Those skills, in turn, can be used to solve puzzles and challenges that the player encounters.
+
 ### Target Audience
 
+The target audience is children at various grade levels. Parents and teachers may also be interested in playing the game and track student progress through the knowledge map.
+
 ### Genres
+
+This game is a blend of a few genres, namely:
+
+- role-playing - where players take on the role of a character and help them overcome obstacles
+- educational - where the primary goal of the game is to promote learning real-life skills
+- life-sim - where the player must consider some daily needs of the character, such as nutrition and rest
 
 ### Game flow summary
 
@@ -106,6 +125,8 @@ This document describes the overall intended design for the OpenLearningQuest ga
 ## Story and narrative
 
 ### Back story
+
+The main character has just moved to a new town. They must build a sense of place while making friends and growing.
 
 ### Plot elements
 
