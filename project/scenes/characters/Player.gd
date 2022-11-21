@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-var player_speed = 100
-var speed = Vector2(player_speed, player_speed) # 64 pixels per second
+export var player_speed = 100
+var speed_vector = Vector2(player_speed, player_speed) # 64 pixels per second
 var move_to = null
 
 func _input(event):
@@ -32,6 +32,9 @@ func _physics_process(delta):
 			pass
 		else:
 			# player should move
-			var velocity = move_and_slide(move_vector.normalized() * speed)
+			# normalize move vector to range 0:1
+			var velocity = move_and_slide(
+				move_vector.normalized() * speed_vector
+			)
 		
 			_change_player_direction(velocity)
