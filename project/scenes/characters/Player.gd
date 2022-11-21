@@ -18,7 +18,7 @@ func _change_player_direction(velocity):
 	else:
 		$PlayerAnimation.play("MoveSide")
 		
-		$PlayerSprite.flip_h = velocity.x < 0
+		$PlayerSprite.flip_h = velocity.x > 0
 
 func _physics_process(delta):
 	# only calculate move vector if player should move
