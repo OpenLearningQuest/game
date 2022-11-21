@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-var speed = Vector2(64, 64) # 64 pixels per second
+var player_speed = 100
+var speed = Vector2(player_speed, player_speed) # 64 pixels per second
 var move_to = null
 
 func _input(event):
@@ -18,10 +19,19 @@ func _change_player_direction(velocity):
 		$PlayerSprite.flip_h = velocity.x < 0
 
 func _physics_process(delta):
+	# only calculate move vector if player should move
 	if move_to:
 		var move_vector = move_to - global_position
 		
-		if move_vector.length() > 3:
-			var velocity = move_and_slide(move_vector.normalized() * speed)
+		var player_arrived_at_destination = move_vector.length() < 3
+		
+		if player_arrived_at_destination:
+			# player should no longer move
+			move_to = null
 			
+			pass
+		else:
+			# player should move
+			var velocity = move_and_slide(move_vector.normalized() * speed)
+		
 			_change_player_direction(velocity)
