@@ -1,9 +1,33 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/scenery/Bush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/scenery/Tree.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26, 24 )
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 441, 227 )
+
+[node name="Tree3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 287, 323 )
+
+[node name="Tree2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 593, 287 )
+
+[node name="Tree" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 88, 325 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 382, 308 )
 player_speed = 200
+
+[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 371, 51 )
+
+[node name="Bush" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 169, 198 )
