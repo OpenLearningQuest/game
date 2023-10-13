@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 # how fast the player should move in pixels per second
-export var player_speed = 100
+@export var player_speed = 100
 
 var speed_vector = Vector2(player_speed, player_speed)
 var move_to = null
