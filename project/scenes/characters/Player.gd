@@ -11,9 +11,9 @@ func _input(event):
 		move_to = get_viewport().get_mouse_position()
 
 func _change_player_direction(velocity):
-	if velocity.x > velocity.y and velocity.x < -velocity.y:
+	if velocity.x > velocity.y and velocity.x < - velocity.y:
 		$PlayerAnimation.play("MoveUp")
-	elif velocity.x < velocity.y and velocity.x > -velocity.y:
+	elif velocity.x < velocity.y and velocity.x > - velocity.y:
 		$PlayerAnimation.play("MoveDown")
 	else:
 		$PlayerAnimation.play("MoveSide")
@@ -30,7 +30,7 @@ func _physics_process(delta):
 			move_to = null
 			
 			# Stop moving by setting velocity to zero
-			velocity = Vector2.ZERO  
+			velocity = Vector2.ZERO
 		else:
 			# player should move
 			# normalize move vector to range 0:1
