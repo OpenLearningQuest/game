@@ -10,16 +10,16 @@ func _input(event):
 	if event.is_action_pressed("player_move"):
 		move_to = get_viewport().get_mouse_position()
 
-func _change_player_direction(velocity):
-	if velocity.x > velocity.y and velocity.x < - velocity.y:
+func _change_player_direction(new_velocity):
+	if new_velocity.x > new_velocity.y and new_velocity.x < - new_velocity.y:
 		$PlayerAnimation.play("MoveUp")
-	elif velocity.x < velocity.y and velocity.x > - velocity.y:
+	elif new_velocity.x < new_velocity.y and new_velocity.x > - new_velocity.y:
 		$PlayerAnimation.play("MoveDown")
 	else:
 		$PlayerAnimation.play("MoveSide")
-		$PlayerSprite.flip_h = velocity.x > 0
+		$PlayerSprite.flip_h = new_velocity.x > 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# only calculate move vector if player should move
 	if move_to:
 		var move_vector = move_to - global_position
