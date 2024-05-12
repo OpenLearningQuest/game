@@ -8,4 +8,4 @@ editor_settings*.tres
 scene_cache*.cfg
 
 .vscode/
-**/.vscode/
+/**/.vscode/
