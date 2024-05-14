@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://jtoaycfxvi1d"]
+
+[ext_resource type="Texture2D" uid="uid://2sq5rx7eib2p" path="res://Assets/Sprites/Greg.png" id="1_jfh0u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rie8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jfh0u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_qv4vf"]
+script/source = "extends AnimatedSprite3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D"]
+sprite_frames = SubResource("SpriteFrames_rie8f")
+script = SubResource("GDScript_qv4vf")
